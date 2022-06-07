@@ -1,0 +1,15 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+form(method='POST' action='/')
+  input(type='text' placeholder='First Name' name='firstName')
+  input(type='text' placeholder='Last Name' name='lastName')
+  input(type='number' placeholder='Age' name='age')
+  input(type='submit' value='Submit')
+h2 List of users
+ul
+  each user in users
+    li #{user.firstName} #{user.lastName} is #{user.age} years old.
